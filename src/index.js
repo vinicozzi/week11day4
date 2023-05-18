@@ -6,6 +6,7 @@ import App from './App';
 import configureStore from './store';
 import { Provider } from 'react-redux';
 import { populateProduce } from './store/produce';
+import { addToCart } from './store/cart';
 // ...
 
 
@@ -13,6 +14,7 @@ const store = configureStore();
 if (process.env.NODE_ENV !== "production") {
   window.store = store;
   window.populateProduce = populateProduce;
+  window.addToCart = addToCart;
 }
 
 function Root() {
